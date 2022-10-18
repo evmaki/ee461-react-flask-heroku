@@ -28,3 +28,5 @@ Follow this suggested workflow as you make changes to increase your chances of s
     - Create a new app on Heroku
     - Connect Heroku to your GitHub account (if you haven't already)
     - Search for this repository under your new Heroku app > Deploy > Connect to GitHub (bottom of the page) and connect to it
+    - At the bottom of the Deploy page under Manual deploy, select the main branch and click Deploy Branch
+    - If/when deployment fails, view the build log to learn why
