@@ -13,6 +13,9 @@ Each time you make changes to it, **you need to _manually build it_** by running
 
 ``npm run build``
 
+## requirements.txt
+This is a list of Python libraries used by your Flask backend. Heroku uses it to install all of the dependencies used by your Flask app.
+
 ## Suggested Workflow
 Follow this suggested workflow as you make changes to increase your chances of success:
 
@@ -30,3 +33,10 @@ Follow this suggested workflow as you make changes to increase your chances of s
     - Search for this repository under your new Heroku app > Deploy > Connect to GitHub (bottom of the page) and connect to it
     - At the bottom of the Deploy page under Manual deploy, select the main branch and click Deploy Branch
     - If/when deployment fails, view the build log to learn why
+
+## FAQ
+Q: Why isn't it working when I try to deploy to Heroku?
+
+A: If you try to deploy this repository _with no changes_ it _should_ work. The first place to look is the _build logs_ that are generated when you try to deploy.
+- If your error appears under "Installing requirements with pip" in the build logs, you are probably missing a Python dependency in ``requirements.txt``. Make sure any additional libraries you are using for your Flask app are included in ``requirements.txt``.
+- If your error happens AFTER deployment when you try to access the app in the browser, then you might have a bug in your Flask app that is causing it to crash. Access your app on the Heroku web panel, go to "More" on the top-ish right-hand side, and go to "View logs". These logs are equivalent to the terminal output you see when running a Python program on your computer. There is useful information there that will help you debug your app.
