@@ -1,0 +1,2 @@
+# ui
+The code for your React frontend goes here, in the ``/ui/`` directory. Every time you make a change, you will need to _manually build it_ using ``npm run build``. This is because your Flask backend is serving up the React frontend now. This is different from before, where you were using the React toolchain to automatically build the project each time you made a change and update it in the browser (i.e., running ``npm start`` and letting the React toolchain do the rest).
