@@ -43,4 +43,4 @@ A: If you try to deploy this repository _with no changes_ it _should_ work. The 
 
 Q: I'm using PowerShell on Windows and I get "Error: Could not locate Flask application. You did not provide the FLASK_APP environment variable." when trying to run the Flask app.
 
-A: Try setting your ``FLASK_APP`` environment variable in PowerShell by running the following: ``$env:FLASK_APP="app"``
+A: First, make sure you are running ``flask run`` in the right directory (the top-level directory of this repo, where ``app.py`` is). If you still get the error, try setting your ``FLASK_APP`` environment variable in PowerShell by running the following: ``$env:FLASK_APP="app"``
